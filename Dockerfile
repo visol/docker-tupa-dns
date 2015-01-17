@@ -17,7 +17,6 @@ RUN curl -o tupa-dns.zip -SL https://github.com/visol/tupa-dns/archive/${TUPA_GI
 
 COPY docker-entrypoint.sh /entrypoint.sh
 COPY assets/config_site.inc.php /var/www/html/config/config_site.inc.php
-COPY assets/egroupware.php.ini /usr/local/etc/php/conf.d/egroupware.ini
 COPY assets/apache.conf /etc/apache2/apache2.conf
 
 EXPOSE 80

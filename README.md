@@ -23,8 +23,8 @@ mysql:5,5
 
 
 docker run -d \
---name tupa-dnsegroupware \
--e EGROUPWARE_INSTALLER_PASSWORD=tupainstall \
+--name tupa-dns \
+-e TUPA_INSTALLER_PASSWORD=tupainstall \
 -p 10080:80 \
 --link mysql-tupa-dns:mysql \
 visol/tupa-dns:0.1.1
