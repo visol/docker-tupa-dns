@@ -4,7 +4,7 @@ Dockerfile to build a TUPA DNS container image.
 
 ## Version
 
-Current Version: **0.1 - 157b97d**
+Current Version: **0.2 - 219610f**
 
 # Quick Start
 
