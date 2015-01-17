@@ -19,7 +19,7 @@ docker run -d \
 -e MYSQL_USER=tupa \
 -e MYSQL_PASSWORD=AnotherSecretPassword \
 -v /opt/mysql-tupa-dns/data:/var/lib/mysql \
-mysql:5,5
+mysql:5.5
 
 
 docker run -d \
