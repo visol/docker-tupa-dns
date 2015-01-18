@@ -15,6 +15,8 @@ RUN curl -o tupa-dns.zip -SL https://github.com/visol/tupa-dns/archive/${TUPA_GI
     && rm tupa-dns.zip \
     && rm -rf /var/www/html/tupa-dns-${TUPA_GIT_SHA1}
 
+RUN curl -o /var/www/proxy.php -SL https://gist.githubusercontent.com/jrenggli/738ceb8820344651e270/raw/3e2805e39dbbdab210b0edd15cb4b32a4ddb3449/proxy.php
+
 COPY docker-entrypoint.sh /entrypoint.sh
 COPY assets/config_site.inc.php /var/www/html/config/config_site.inc.php
 COPY assets/apache.conf /etc/apache2/apache2.conf
