@@ -12,6 +12,13 @@ set_config() {
 }
 
 
+set_apache_config() {
+	key="$1"
+	value="$2"
+	sed_escaped_value="$(echo "$value" | sed 's/[\/&]/\\&/g')"
+	sed -ri "s/(['\"])?\{$key\}(['\"])?/$sed_escaped_value/" /etc/apache2/apache2.conf
+}
+
 #
 # database configuration
 #
@@ -41,9 +48,10 @@ hash_password() {
 
 
 TUPA_INSTALLER_PASSWORD=${TUPA_INSTALLER_PASSWORD-"tupainstall"}
+PHP_TIMEZONE=${PHP_TIMEZONE-"Europe/Zurich"}
 
 set_config 'INSTALLER_PASSWORD' "$(hash_password $TUPA_INSTALLER_PASSWORD)"
-
+set_apache_config 'PHP_TIMEZONE' "${PHP_TIMEZONE}"
 
 
 case "$1" in

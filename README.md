@@ -25,9 +25,10 @@ mysql:5.5
 docker run -d \
 --name tupa-dns \
 -e TUPA_INSTALLER_PASSWORD=tupainstall \
+-e PHP_TIMEZONE=Europe/Zurich \
 -p 10080:80 \
 --link mysql-tupa-dns:mysql \
-visol/tupa-dns:0.1.1
+visol/tupa-dns:0.1.3
 ```
 
 Point your browser to `http://localhost:10080/installer/` and login with the defined password:
