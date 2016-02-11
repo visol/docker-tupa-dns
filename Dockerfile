@@ -7,7 +7,7 @@ RUN apt-get update \
 
 RUN docker-php-ext-install mysql
 
-ENV TUPA_GIT_SHA1 7b9e54de096e5406eb2ce4146dab6ba0fed6c22f
+ENV TUPA_GIT_SHA1 a447bb5908eb778286be08257eadf8ceafd06c59
 
 RUN curl -o tupa-dns.zip -SL https://github.com/visol/tupa-dns/archive/${TUPA_GIT_SHA1}.zip \
     && unzip tupa-dns.zip -d /var/www/html \
