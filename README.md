@@ -25,6 +25,8 @@ mysql:5.5
 docker run -d \
 --name tupa-dns \
 -e TUPA_INSTALLER_PASSWORD=tupainstall \
+-e DEFAULT_SOA_PRIMARY=ns1.example.org \
+-e DEFAULT_SOA_HOSTMASTER=hostmaster@example.org \
 -e PHP_TIMEZONE=Europe/Zurich \
 -p 10080:80 \
 --link mysql-tupa-dns:mysql \

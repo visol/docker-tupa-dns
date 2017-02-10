@@ -25,3 +25,12 @@ $tupa_db_port = '{DB_PORT}';
 $tupa_db_username = '{DB_USERNAME}';
 $tupa_db_password = '{DB_PASSWORD}';
 
+// Default settings
+$TUPA_CONF_VARS['DNS']['defaultTTL'] = '{DEFAULT_TTL}';
+$TUPA_CONF_VARS['DNS']['defaultPrio'] = '{DEFAULT_PRIO}';
+$TUPA_CONF_VARS['DNS']['defaultSoaPrimary'] = '{DEFAULT_SOA_PRIMARY}';
+$TUPA_CONF_VARS['DNS']['defaultSoaHostmaster'] = '{DEFAULT_SOA_HOSTMASTER}';
+$TUPA_CONF_VARS['DNS']['defaultSoaRefresh'] = '{DEFAULT_SOA_REFRESH}';
+$TUPA_CONF_VARS['DNS']['defaultSoaRetry'] = '{DEFAULT_SOA_RETRY}';
+$TUPA_CONF_VARS['DNS']['defaultSoaExpire'] = '{DEFAULT_SOA_EXPIRE}';
+$TUPA_CONF_VARS['DNS']['defaultSoaTTL'] = '{DEFAULT_SOA_TTL}';

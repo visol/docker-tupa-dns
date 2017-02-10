@@ -35,7 +35,14 @@ set_config 'DB_NAME' "$MYSQL_ENV_MYSQL_DATABASE"
 set_config 'DB_USERNAME' "$MYSQL_ENV_MYSQL_USER"
 set_config 'DB_PASSWORD' "$MYSQL_ENV_MYSQL_PASSWORD"
 
-
+set_config 'DEFAULT_TTL' "${DEFAULT_TTL:-3600}"
+set_config 'DEFAULT_PRIO' "${DEFAULT_PRIO:-20}"
+set_config 'DEFAULT_SOA_PRIMARY' "${DEFAULT_SOA_PRIMARY:-ns1.example.org}"
+set_config 'DEFAULT_SOA_HOSTMASTER' "${DEFAULT_SOA_HOSTMASTER:-hostmaster@example.org}"
+set_config 'DEFAULT_SOA_REFRESH' "${DEFAULT_SOA_REFRESH:-10800}"
+set_config 'DEFAULT_SOA_RETRY' "${DEFAULT_SOA_RETRY:-3600}"
+set_config 'DEFAULT_SOA_EXPIRE' "${DEFAULT_SOA_EXPIRE:-604800}"
+set_config 'DEFAULT_SOA_TTL' "${DEFAULT_SOA_TTL:-86400}"
 
 #
 # installer password
