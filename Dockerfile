@@ -1,4 +1,4 @@
-FROM php:5.5-apache
+FROM php:7.4.11-apache
 MAINTAINER Jonas Renggli <jonas.renggli@visol.ch>
 
 RUN apt-get update \
